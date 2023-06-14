@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SKELETON</title>
+</head>
+<body class="menu">
+    <aside>
+        <div class="menu-content">
+            <h1>
+               <!--<img src="logo_FULL.png" alt=""> -->
+               LOGO
+            </h1>
+            <nav>
+                <ul>
+                    <li><a>Manifestação</a></li>
+                    <li>Usuarios</li>
+                    <li>Configurações</li>
+                    <li>Sair</li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="btn-content">
+        <img src="./img/laugh-laugh-face-laught-emoji-svgrepo-com (1).svg" alt="" class="emoji" onclick="toggleForm()">
+        <button class="btn-mnf btn-center" onclick="toggleForm()">Criar manifestação</button>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h2>Formulário de Satisfação</h2>
+
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+
+                <label for="rating">Avaliação:</label>
+                <select id="rating" required>
+                    <option value="">Qual a sua satisfação com o atendimento da OCA</option>
+                    <option value="excelente">Excelente</option>
+                    <option value="bom">Bom</option>
+                    <option value="regular">Regular</option>
+                    <option value="ruim">Ruim</option>
+                </select>
+
+                <label for="comments">Comentários:</label>
+                <textarea id="comments" cols="30" rows="10"></textarea>
+
+                <button type="submit" class="btn-submit" onclick="submitForm()">Enviar</button>
+                <button type="button" class="btn-cancel" onclick="toggleForm()">Fechar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
