@@ -39,6 +39,7 @@ textarea {
     width: 100%;
 }
 
+
 .menu {
   background: #ffffff;
   position: fixed;
@@ -97,6 +98,19 @@ img {
   cursor: pointer;
 }
 
+.logo{
+  width: 250px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+
 .btn-content {
   display: flex;
   flex-direction: column;
@@ -106,8 +120,10 @@ img {
 }
 
 .btn-mnf {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
+  width: 18.5rem;
   font-size: 1.8rem;
+  margin-left: 25rem;
   margin-top: 1rem;
   background-color: #03b1b1;
   font-weight: 600;
@@ -117,9 +133,31 @@ img {
   cursor: pointer;
 }
 
+.btn-mnf-cancel {
+  padding: 2rem 2rem;
+  width: 18.5rem;
+  font-size: 1.8rem;
+  margin-right: 25rem;
+  margin-bottom: -7.2rem;
+  margin-top: 1rem;
+  background-color: #03b1b1;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-mnf-cancel:hover {
+  transition: 0.2s;
+  background-color: crimson;
+  transform: scale(1.1);
+}
+
 .btn-mnf:hover {
   background-color: #747171;
   transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .emoji:hover {
@@ -129,45 +167,109 @@ img {
 }
 
 .form-popup {
+  width: 70%;
   display: none;
   position: fixed;
+  height: 500px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f2f2f2;
-  padding: 2rem;
+  padding: 5rem;
   border: 1px solid #ccc;
   z-index: 9999;
 }
 
+.form-popup .form-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+/* Adicione as regras de estilo para o formulário */
 .form-container {
-  max-width: 400px;
+  max-width: 4000px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
 }
 
 .form-container h2 {
   text-align: center;
 }
 
-.form-container label,
-.form-container input,
-.form-container button {
+.form-container label {
   display: block;
+  margin-top: 16px;
+}
+
+.form-container input[type="text"],
+.form-container select,
+.form-container textarea {
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  resize: vertical;
 }
 
 .form-container button {
-  padding: 0.5rem 1rem;
-  background-color: #747171;
-  color: #ffffff;
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 16px;
   border: none;
-  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
   cursor: pointer;
 }
 
 .form-container button.btn-cancel {
-  background-color: #ccc;
+  background-color: crimson;
 }
+
+
+.form-container input[type="radio"],
+.form-container input[type="checkbox"] {
+  display: none;
+}
+
+
+.form-container input[type="radio"] + label,
+.form-container input[type="checkbox"] + label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container input[type="radio"]:checked + label,
+.form-container input[type="checkbox"]:checked + label {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Coloque os botões de opção um ao lado do outro */
+.form-container .radio-group {
+  display: flex;
+}
+
+.form-container .radio-group label {
+  margin-right: 16px;
+}
+
+.form-container input[type="radio"]:checked + label,
+.form-container input[type="checkbox"]:checked + label {
+  background-color: #4caf50;
+  color: white;
+}
+
+.form-container input[type="radio"]:focus + label,
+.form-container input[type="checkbox"]:focus + label {
+  outline: 2px solid #4caf50;
+}
+
 
 .result{
     text-align: center;

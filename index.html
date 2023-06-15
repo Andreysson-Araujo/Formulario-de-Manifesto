@@ -1,57 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Formulario</title>
-</head>
-<body class="menu">
+  </head>
+  <body class="menu">
     <aside>
-        <div class="menu-content">
-            <h1>
-               <!--<img src="logo_FULL.png" alt=""> -->
-               LOGO
-            </h1>
-            <nav>
-                <ul>
-                    <li><a>Manifestação</a></li>
-                    <li>Usuarios</li>
-                    <li>Configurações</li>
-                    <li>Sair</li>
-                </ul>
-            </nav>
-        </div>
+      <div class="menu-content">
+        <h1>
+          <img class="logo" src="./img/logo.png" alt="Logo" />
+        </h1>
+        <nav>
+          <ul>
+            <li><a>Manifestação</a></li>
+            <li>Usuarios</li>
+            <li>Configurações</li>
+            <li>Sair</li>
+          </ul>
+        </nav>
+      </div>
     </aside>
 
-    <div class="btn-content">
-        <img src="./img/laugh-laugh-face-laught-emoji-svgrepo-com (1).svg" alt="" class="emoji" onclick="toggleForm()">
-        <button class="btn-mnf btn-center" onclick="toggleForm()">Criar manifestação</button>
+    <div>
+      <div class="btn-content">
+        <img
+          src="./img/laugh-laugh-face-laught-emoji-svgrepo-com (1).svg"
+          alt=""
+          class="emoji"
+          onclick="toggleForm()"
+        />
+        <button class="btn-mnf-cancel btn-center">Não fazer</button>
+        <button class="btn-mnf btn-center" onclick="toggleForm()">
+          Fazer formulario
+        </button>
         <div class="form-popup" id="myForm">
-            <form class="form-container">
-                <h2>Formulário de Satisfação</h2>
+          <form class="form-container">
+            <h2>Formulário de Satisfação</h2>
 
-                <label for="name">Nome:</label>
-                <input type="text" id="name" required>
+            <label for="senha"><strong>Senha:</strong></label>
+            <input type="text" id="senha">
 
-                <label for="rating">Avaliação:</label>
-                <select id="rating" required>
-                    <option value="">Qual a sua satisfação com o atendimento da OCA</option>
-                    <option value="excelente">Excelente</option>
-                    <option value="bom">Bom</option>
-                    <option value="regular">Regular</option>
-                    <option value="ruim">Ruim</option>
-                </select>
+            <label for="atendimento"><strong>Satisfação com o atendimento:</strong></label>
+            <div>
+              <input type="radio" id="atendimento-excelente" name="atendimento" value="excelente" required />
+              <label for="atendimento-excelente">Otimo</label>
+              <input type="radio" id="atendimento-bom" name="atendimento" value="bom" />
+              <label for="atendimento-bom">Bom</label>
+              <input type="radio" id="atendimento-regular" name="atendimento" value="regular" />
+              <label for="atendimento-regular">Regular</label>
+              <input type="radio" id="atendimento-ruim" name="atendimento" value="ruim" />
+              <label for="atendimento-ruim">Ruim</label>
+              <input type="radio" id="atendimento-pessimo" name="atendimento" value="pessimo" />
+              <label for="atendimento-pessimo">Pessimo</label>
+              
+              
+            </div>
+            <label for="tempo-espera"><strong>Satisfação com o tempo de espera:</strong></label>
+            <div>
+              <input type="radio" id="tempo-espera-excelente" name="tempo-espera" value="excelente" required />
+              <label for="tempo-espera-excelente">Otimo</label>
+              <input type="radio" id="tempo-espera-bom" name="tempo-espera" value="bom" />
+              <label for="tempo-espera-bom">Bom</label>
+              <input type="radio" id="tempo-espera-regular" name="tempo-espera" value="regular" />
+              <label for="tempo-espera-regular">Regular</label>
+              <input type="radio" id="tempo-espera-ruim" name="tempo-espera" value="ruim" />
+              <label for="tempo-espera-ruim">Ruim</label>
+              <input type="radio" id="tempo-espera-pessimo" name="tempo-espera" value="pessimo">
+              <label for="tempo-espera-pessimo">Pessimo</label>
+            </div>
 
-                <label for="comments">Comentários:</label>
-                <textarea id="comments" cols="30" rows="10"></textarea>
+            <label for="ambiente">Satisfação com o ambiente:</label>
+            <div>
+              <input type="radio" id="ambiente-excelente" name="ambiente" value="excelente" required />
+              <label for="ambiente-excelente">Otimo</label>
+              <input type="radio" id="ambiente-bom" name="ambiente" value="bom" />
+              <label for="ambiente-bom">Bom</label>
+              <input type="radio" id="ambiente-regular" name="ambiente" value="regular" />
+              <label for="ambiente-regular">Regular</label>
+              <input type="radio" id="ambiente-ruim" name="ambiente" value="ruim" />
+              <label for="ambiente-ruim">Ruim</label>
+              <input type="radio" id="ambiente-pessimo" name="ambiente" value="pessimo" />
+              <label for="ambiente-pessimo">Pessimo</label>
+            </div>
+            
+            <label for="resolucao">Satisfação com a resolução do problema:</label>
+            <div>
+              <input type="radio" id="resolucao-excelente" name="resolucao" value="excelente" required />
+              <label for="resolucao-excelente">Otimo</label>
+              <input type="radio" id="resolucao-bom" name="resolucao" value="bom" />
+              <label for="resolucao-bom">Bom</label>
+              <input type="radio" id="resolucao-regular" name="resolucao" value="regular" />
+              <label for="resolucao-regular">Regular</label>
+              <input type="radio" id="resolucao-ruim" name="resolucao" value="ruim" />
+              <label for="resolucao-ruim">Ruim</label>
+              <input type="radio" id="resolucao-pessimo" name="resolucao" value="pessimo" />
+              <label for="resolucao-pessimo">Pessimo</label>
+            </div>
 
-                <button type="submit" class="btn-submit" onclick="submitForm()">Enviar</button>
-                <button type="button" class="btn-cancel" onclick="toggleForm()">Fechar</button>
-            </form>
+            <Label for="comentarios"><strong>Comentarios:</strong></Label>
+            <div>
+                <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" onclick="submitForm()">Enviar</button>
+            <button type="button" class="btn-cancel" onclick="toggleForm()">Fechar</button>
+          </form>
         </div>
+      </div>
     </div>
-
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>

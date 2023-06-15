@@ -5,33 +5,25 @@ function toggleForm() {
 }
 
 function submitForm() {
-  let name = document.getElementById("name").value;
-  let rating = document.getElementById("rating").value;
-  let comments = document.getElementById("comments").value;
+  let name = document.getElementById("senha").value;
 
   var url =
     "./pages/manifest.html" +
-    "?name=" +
-    encodeURIComponent(name) +
-    "&rating=" +
-    encodeURIComponent(rating) +
-    "&comments=" +
-    encodeURIComponent(comments);
+    "?senha=" +
+    encodeURIComponent(senha) +
 
-  window.open(url, "_blank");
+  window.open("./pages/manifest.html", "_blank");
 }
 
 const params = new URLSearchParams(window.location.search);
 
 // Extrair os valores dos parâmetros
-const name = params.get("name");
-const rating = params.get("rating");
-const comments = params.get("comments");
+const name = params.get("senha");
+
 
 // Exibir os resultados na página
 const resultDiv = document.getElementById("result");
 resultDiv.innerHTML = `
-      <p><strong>Nome:</strong> ${name}</p>
-      <p><strong>Classificação:</strong> ${rating}</p>
-      <p><strong>Comentários:</strong> ${comments}</p>
+      <p><strong>Nome:</strong> ${senha}</p>
+
   `;
