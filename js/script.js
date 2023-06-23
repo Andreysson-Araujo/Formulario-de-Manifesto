@@ -5,7 +5,7 @@ function toggleForm() {
 }
 
 function submitForm() {
-  let name = document.getElementById("senha").value;
+  let senha = document.getElementById("senha").value;
 
   var url =
     "./pages/manifest.html" +
@@ -14,6 +14,25 @@ function submitForm() {
 
   window.open("./pages/manifest.html", "_blank");
 }
+
+function checkPasswordLength() {
+  var inputSenha = document.querySelector('.inserir');
+  var buttons = document.querySelectorAll('.btn-content button');
+
+  if (inputSenha.value.length >= 4) {
+    buttons.forEach(function(button) {
+      button.disabled = false;
+    });
+    
+  } else {
+    buttons.forEach(function(button) {
+      button.disabled = true;
+    });
+  }
+}
+
+// Event listener para chamar a função checkPasswordLength() sempre que o valor do campo de senha mudar
+document.querySelector('.inserir').addEventListener('input', checkPasswordLength);
 
 const params = new URLSearchParams(window.location.search);
 

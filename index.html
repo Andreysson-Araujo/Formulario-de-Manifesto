@@ -25,22 +25,14 @@
 
     <div>
       <div class="btn-content">
-        <img
-          src="./img/laugh-laugh-face-laught-emoji-svgrepo-com (1).svg"
-          alt=""
-          class="emoji"
-          onclick="toggleForm()"
-        />
-        <button class="btn-mnf-cancel btn-center">Não fazer</button>
-        <button class="btn-mnf btn-center" onclick="toggleForm()">
-          Fazer formulario
-        </button>
+        <h2>Senha:</h2>
+        <input class="inserir" type="text" placeholder="Senha" />
+        <img src="./img/laugh-laugh-face-laught-emoji-svgrepo-com (1).svg" alt="" class="emoji" onclick="toggleForm()" />
+        <button class="btn-mnf-cancel btn-center" onclick="toggleForm()" disabled>Não fazer</button>
+        <button class="btn-mnf btn-center" onclick="toggleForm()" disabled>Fazer formulário</button>
         <div class="form-popup" id="myForm">
           <form class="form-container">
             <h2>Formulário de Satisfação</h2>
-
-            <label for="senha"><strong>Senha:</strong></label>
-            <input type="text" id="senha">
 
             <label for="atendimento"><strong>Satisfação com o atendimento:</strong></label>
             <div>
@@ -54,9 +46,8 @@
               <label for="atendimento-ruim">Ruim</label>
               <input type="radio" id="atendimento-pessimo" name="atendimento" value="pessimo" />
               <label for="atendimento-pessimo">Pessimo</label>
-              
-              
             </div>
+            
             <label for="tempo-espera"><strong>Satisfação com o tempo de espera:</strong></label>
             <div>
               <input type="radio" id="tempo-espera-excelente" name="tempo-espera" value="excelente" required />
@@ -99,12 +90,12 @@
               <label for="resolucao-pessimo">Pessimo</label>
             </div>
 
-            <Label for="comentarios"><strong>Comentarios:</strong></Label>
+            <label for="comentarios"><strong>Comentarios:</strong></label>
             <div>
-                <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+              <textarea name="comentarios" cols="30" rows="10"></textarea>
             </div>
 
-            <button type="submit" class="btn-submit" onclick="submitForm()">Enviar</button>
+            <button type="submit" class="btn-submit">Enviar</button>
             <button type="button" class="btn-cancel" onclick="toggleForm()">Fechar</button>
           </form>
         </div>

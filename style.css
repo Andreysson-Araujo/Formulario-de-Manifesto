@@ -39,7 +39,20 @@ textarea {
     width: 100%;
 }
 
+input{
+  font-size: 3rem;
+}
 
+
+button:disabled{
+  background-color: #747171;
+}
+
+button:disabled:hover{
+  transform: none;
+  background-color: #747171;
+  cursor: none;
+}
 .menu {
   background: #ffffff;
   position: fixed;
@@ -154,8 +167,10 @@ img {
   transform: scale(1.1);
 }
 
+
+
 .btn-mnf:hover {
-  background-color: #747171;
+  background-color: #03f016;
   transform: scale(1.1);
   transition: 0.2s;
 }
@@ -167,29 +182,28 @@ img {
 }
 
 .form-popup {
-  width: 70%;
+  width: 100%;
+  height: 100%;
   display: none;
   position: fixed;
-  height: 500px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #f2f2f2;
-  padding: 5rem;
-  border: 1px solid #ccc;
-  z-index: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  overflow-y: auto;
 }
 
 .form-popup .form-container {
-  max-height: 300px;
+  
   overflow-y: auto;
 }
 /* Adicione as regras de estilo para o formulário */
 .form-container {
-  max-width: 4000px;
-  padding: 20px;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 2rem;
   background-color: #f2f2f2;
-  margin: 0 auto;
+  border: 1px solid #ccc;
 }
 
 .form-container h2 {
